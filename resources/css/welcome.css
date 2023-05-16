@@ -1,0 +1,20 @@
+h1{
+    font-family: carrots;
+    text-shadow:-2px 0 rgb(74, 25, 44), 0 2px rgb(74, 25, 44), 2px 0  rgb(74, 25, 44), 0 -2px  rgb(74, 25, 44);
+}
+    
+
+h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4{
+    font-family: spective;
+}
+*{
+   
+    font-family: comic sans Ms ;
+}
+:root{
+    --acqua-marina:	 rgb(0,255,255);  
+    --blue :rgb(0,0,255) ;
+    --aliceblue: rgb(240,248,255);
+    --darkorchid:rgb(153,50,204);
+    --black: rgb(0, 0, 0);
+}
