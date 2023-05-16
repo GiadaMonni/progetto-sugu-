@@ -9,9 +9,40 @@
         <a href="">
           <li class="px-3 fs-4 link1">Home</li>
         </a>
-        <a href="">
-          <li class="px-3 fs-4 link2">Articoli</li>
+        @guest
+        <a href=" {{route('register')}}">
+          <li class="px-3 fs-4 link1"> Registrati </li>
         </a>
+
+        <a href=" {{route('login')}}">
+          <li class="px-3 fs-4 link1"> Login </li>
+        </a> 
+
+        @else
+
+       <li class="px-3 fs-4 link1"> 
+        <a href="" class="dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{Auth::user()->name}}</a>
+        <ul class="dropdown-menu">
+          <li>
+            <a class="dropdown-item" href="#">Action</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Another action</a>
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <a class="dropdown-item" href="/logout" onclick="event.preventDefault();getElementById('form-logout').submit();"> Logout</a>
+          </li>
+          <form id="form-logout" action="{{route('logout')}}" method="POST" class="d-none">
+          @csrf</form>
+        </ul>
+       </li>
+
+        @endguest
+        {{-- <a href="">
+          <li class="px-3 fs-4 link2">Articoli</li>
+        </a> --}}
+
        <a href=""> 
         <li class="px-3 fs-4 link3">Chi siamo</li>
       </a>
