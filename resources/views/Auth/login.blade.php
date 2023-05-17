@@ -1,5 +1,5 @@
 <x-layout2>
-{{-- 
+
     <div class="form-container">
         <p class="title">Login</p>
         <form action="{{route('login')}}" method="POST" class="form">
@@ -46,6 +46,6 @@
         <p class="signup">Don't have an account?
             <a rel="noopener noreferrer" href="#" class="">Sign up</a>
         </p>
-    </div> --}}
+    </div>
 
 </x-layout2>
