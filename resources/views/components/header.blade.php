@@ -1,12 +1,10 @@
 <header class="container-fluid"></header>
+
       <div class="row align-items-center header py-0">
         <div class="col-12 text-center text-darkorchid ">
           <h1>SUGU</h1>
         </div>
-        <div class="col-12 d-flex justify-content-center">
-          <button class="btn btn-custom me-3 fs-3 text-blue">Click Here</button>
-          <button class="btn btn-custom ms-3 fs-3 text-blue">Click Here</button>
-        </div>
+       
       </div>
 
       <!-- positioned -->

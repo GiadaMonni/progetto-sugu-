@@ -1,4 +1,4 @@
-<footer id="navbar" class="navbar bg-acqua-marina text-blue">
+<footer id="navbar" class="container-fluid navbar bg-acqua-marina text-blue">
 
     <div class="container d-flex justify-content-center">
 
