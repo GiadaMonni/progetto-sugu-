@@ -58,7 +58,7 @@
         {{-- <a href="">
           <li class="px-3 fs-4 link2">Articoli</li>
         </a> --}}
-        <a href="">
+        <a href="{{route('homepage')}}">
           <li class="px-3 fs-4 link1">Home</li>
         </a>
       <a href=""> 

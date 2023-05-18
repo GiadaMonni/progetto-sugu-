@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PubblicController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [PubblicController::class, 'homepage'])->name('homepage');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/nuovo/annuncio',[AnnouncementController::class,'createAnnouncement']
+)->name('announcements.create');
