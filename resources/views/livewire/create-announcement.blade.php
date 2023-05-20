@@ -4,12 +4,12 @@
                     <div class="col-12">
                         <div class="login-box">
                             <p> ANNUNCI </p>
-                             
-                            @if (session()->has('message'))
-                            <div class="flex flex-row justify-content-center my-2 alert    alert-success">
-                                {{session('message')}}
-                            </div>    
-                            @endif
+                                
+                                @if (session()->has('message'))
+                                <div class="flex flex-row justify-content-center my-2 alert alert-success">
+                                    {{session('message')}}
+                                </div>    
+                                @endif
                             
                             <form wire:submit.prevent="store">
                                 @csrf

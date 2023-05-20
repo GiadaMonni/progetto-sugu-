@@ -33,13 +33,14 @@ class CreateAnnouncement extends Component
     public function store()
     {
         $category=Category::find($this->category);
-        $category->announcements()->create([ 
+
+        $announcement=$category->announcements()->create([ 
             'name' => $this->name,
             'body' => $this->body,
             'distretto' => $this->distretto,
             'price' => $this->price,]);
-
-        session()->flash('message', 'caricamento avveenuto con successo');
+            Auth::user()->announcements()->save($announcement);
+        session()->flash('message','caricamento avveenuto con successo');
         $this->cleanForm();
     }
 
