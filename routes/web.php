@@ -17,4 +17,6 @@ use App\Http\Controllers\AnnouncementController;
 Route::get('/', [PubblicController::class, 'homepage'])->name('homepage');
 
 Route::get('/nuovo/annuncio',[AnnouncementController::class,'createAnnouncement']
-)->name('announcements.create');
+)->middleware('auth')->name('announcements.create');
+
+

@@ -24,15 +24,25 @@
                             </div>
 
                             <div class="user-box">
-                                <input wire:model="province" type="text" class="form-control @error('category') text-danger is-invalid @enderror">
+                                <input wire:model="distretto" type="text" class="form-control @error('category') text-danger is-invalid @enderror">
 
-                                <label for="province"> Prefettura </label>
+                                <label for="distretto"> Prefettura </label>
                             </div>
 
                             <div class="user-box">
                                 <input wire:model="price" type="text" class="form-control @error('price') text-danger is-invalid @enderror">
                                     
                                 <label for="price"> Prezzo </label>
+                            </div>
+
+                            <div class="user-box">
+                                <label for="category"></label>
+                                <select wire:model.defer="category" id="category" class="form-control">
+                                    <option value=""> Scegli la provincia </option>
+                                    @foreach ($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         
                             <a href="" type="submit">

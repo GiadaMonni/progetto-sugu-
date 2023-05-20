@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        $categories = [' Hokkaido, Tohoku, Kanto, Chubu, Kansai, Chugoku, Shikoku , Kyushu'];
+        $categories = ['Hokkaido', 'Tohoku', 'Kanto', 'Chubu', 'Kansai', 'Chugoku', 'Shikoku' , 'Kyushu'];
 
         foreach ($categories as $category)
         {

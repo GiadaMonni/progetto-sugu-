@@ -2,22 +2,25 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Announcement;
 use Livewire\Component;
+use App\Models\Category;
+use App\Models\Announcement;
 
 class CreateAnnouncement extends Component
 {
     public $name;
     public $body;
-    public $province;
+    public $distretto;
     public $price;
+    public $category;
 
     
     protected $rules = [
         'name' => 'required|min:3',
         'body' =>'required|min:10',
-        'province' =>'required|min:3',
+        'distretto' =>'required|min:3',
         'price' =>'required|numeric',
+        'category' =>'required',
     ];
 
     
@@ -29,12 +32,13 @@ class CreateAnnouncement extends Component
 
     public function store()
     {
-        Announcement::create([
+        $category=Category::find($this->category);
+        $category->announcements()->create([ 
             'name' => $this->name,
             'body' => $this->body,
-            'province' => $this->province,
-            'price' => $this->price,
-        ]);
+            'distretto' => $this->distretto,
+            'price' => $this->price,]);
+
         session()->flash('message', 'caricamento avveenuto con successo');
         $this->cleanForm();
     }
@@ -47,8 +51,9 @@ class CreateAnnouncement extends Component
     public function cleanForm(){
         $this->name = '';
         $this->body = '';
-        $this->province = '';
+        $this->distretto = '';
         $this->price = '';
+        $this->category = '';
     }
     public function render(){
         return view('livewire.create-announcement');

@@ -1,19 +1,21 @@
-<header class="container-fluid"></header>
+  <header class="container-fluid"></header> 
 
-        <div class="row align-items-center header py-0">
 
-          <div class="col-12 text-center text-darkorchid ">
-            <h1>SUGU</h1>
-          </div>
+          <div class="row align-items-center header py-0">
 
-          <div class=" mb-5 col-12 d-flex justify-content-center">
-
-            <button class="btn btn-custom me-3 fs-3 text-blue" aria-current="page">
-              <a href="{{route('announcements.create')}}">Crea Annuncio </a>
-            </button>
+            <div class="col-12 text-center text-darkorchid ">
+              <h1>SUGU</h1>
+            </div>
+          
+              <div class=" mb-5 col-12 d-flex justify-content-center">
+                <button class="btn btn-custom me-3 fs-3 text-blue" aria-current="page">
+                  @Auth<a href="{{route('announcements.create')}}">Crea Annuncio </a> @endAuth
+                </button>
+              </div>  
+                
+        
             
           </div>
-        </div>
 
 
 

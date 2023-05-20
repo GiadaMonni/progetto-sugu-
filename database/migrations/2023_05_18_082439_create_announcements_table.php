@@ -16,7 +16,7 @@ return new class extends Migration
 
             $table->string('name');
             $table->text('body');
-            $table->string('province');
+            $table->string('distretto');
             $table->decimal('price',8,2);
 
             $table->timestamps();

@@ -57,10 +57,15 @@ h1{
     width: 40vh;
     border-radius: 20%;
     border: solid greenyellow;
-    
-    
+    background-image: url(https://img.freepik.com/free-photo/asian-woman-wearing-japanese-traditional-kimono-looking-cherry-blossoms-castle-himeji-japan_335224-159.jpg?w=996&t=st=1684579568~exp=1684580168~hmac=bb6ac14c091f1acf525b8c2d488781df1b3c877b40e2b1bcb1c3608bdadc4089);
+    background-size: cover;
 }
+button a{
+    text-shadow:-2px 0 rgb(74, 25, 44), 0 2px rgb(74, 25, 44), 2px 0  rgb(74, 25, 44), 0 -2px  rgb(74, 25, 44);
+    text-decoration: none;
+    color: greenyellow;
 
+}
 /* positioned */
 .positioned{
     position: relative;
