@@ -6,11 +6,12 @@ use App\Models\Category;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Announcement;
 
 class Announcement extends Model
 {
     use HasFactory;
-    protected $fillable=['name','body','Distretto','price'];
+    protected $fillable=['name','body','distretto','price'];
 
     public function category(){
         return $this->belongsTo(Category::class);

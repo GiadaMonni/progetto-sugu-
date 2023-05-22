@@ -24,21 +24,21 @@ class CreateAnnouncement extends Component
     ];
 
     
-    // protected $messages = [
-    //     'requirede' => 'il campo: e` obbligatorio',
-    //     'min' => 'il campo: e` troppo corto',
-    //     'numeric' => 'il campo attribut: deve essere un numero',
-    // ];
+    protected $messages= [
+        'requirede'=>'il campo  e` obbligatorio',
+        'min'=>'il campo  e` troppo corto',
+        'numeric'=>'il campo  deve essere un numero',
+    ];
 
     public function store()
     {
         $category=Category::find($this->category);
 
         $announcement=$category->announcements()->create([ 
-            'name' => $this->name,
-            'body' => $this->body,
-            'distretto' => $this->distretto,
-            'price' => $this->price,]);
+            'name'=>$this->name,
+            'body'=>$this->body,
+            'distretto'=>$this->distretto,
+            'price'=>$this->price,]);
             Auth::user()->announcements()->save($announcement);
         session()->flash('message','caricamento avveenuto con successo');
         $this->cleanForm();
@@ -56,7 +56,9 @@ class CreateAnnouncement extends Component
         $this->price = '';
         $this->category = '';
     }
-    public function render(){
+
+    public function render()
+    {
         return view('livewire.create-announcement');
     }
 }

@@ -11,28 +11,38 @@
                                 </div>    
                                 @endif
                             
-                            <form wire:submit.prevent="store">
-                                @csrf
-                            <div class="user-box">
-                                <input wire:model="name" type="text" class="form-control  @error('name') text-danger is-invalid @enderror">
-                                <label for="name"> Citta`</label>
-                            </div>
+                                <form wire:submit.prevent="store">
+                                    @csrf
+                                <div class="user-box mb-5">
+                                    <input wire:model="name" type="text" class="form-control mb-0 @error('name') text-danger is-invalid @enderror">
+                                    <label for="name"> Citta`</label>
+                                    @error('name')
+                                    {{$message}}
+                                    @enderror
+                                </div>
 
-                            <div class="user-box">
-                                <input wire:model="body" type="text" class="form-control @error('body') text-danger is-invalid @enderror">
+                            <div class="user-box mb-5">
+                                <input wire:model="body" type="text" class="form-control mb-0 @error('body') text-danger is-invalid @enderror">
                                 <label for="body"> Descrizione </label>
+                                @error('body')
+                                    {{$message}}
+                                @enderror
                             </div>
 
-                            <div class="user-box">
-                                <input wire:model="distretto" type="text" class="form-control @error('category') text-danger is-invalid @enderror">
-
+                            <div class="user-box mb-5">
+                                <input wire:model="distretto" type="text" class="form-control mb-0 @error('category') text-danger is-invalid @enderror">
                                 <label for="distretto"> Prefettura </label>
+                                @error('distretto')
+                                    {{$message}}
+                                @enderror
                             </div>
 
-                            <div class="user-box">
-                                <input wire:model="price" type="text" class="form-control @error('price') text-danger is-invalid @enderror">
-                                    
+                            <div class="user-box mb-5">
+                                <input wire:model="price" type="text" class="form-control mb-0 @error('price') text-danger is-invalid @enderror">
                                 <label for="price"> Prezzo </label>
+                                @error('price')
+                                    {{$message}}
+                                @enderror
                             </div>
 
                             <div class="user-box">
