@@ -6,7 +6,7 @@
                             <p> ANNUNCI </p>
                                 
                                 @if (session()->has('message'))
-                                <div class="flex flex-row justify-content-center my-2 alert alert-success">
+                                <div class="flex flex-row justify-content-center my-5 alert alert-success">
                                     {{session('message')}}
                                 </div>    
                                 @endif
@@ -38,7 +38,7 @@
                             </div>
 
                             <div class="user-box mb-5">
-                                <input wire:model="price" type="text" class="form-control mb-0 @error('price') text-danger is-invalid @enderror">
+                                <input wire:model="price" type="number" class="form-control mb-0 @error('price') text-danger is-invalid @enderror">
                                 <label for="price"> Prezzo </label>
                                 @error('price')
                                     {{$message}}
@@ -54,14 +54,16 @@
                                     @endforeach
                                 </select>
                             </div>
+                            
+                                                            
+                                    <button type="submit">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        Crea
+                                    </button>
                         
-                            <a href="" type="submit">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                Crea
-                            </a>
                             </form>
                         </div>
                     </div>

@@ -30,7 +30,7 @@
                 <input type="password" name="password_confirmation" id="password_confirmation ">
             </div>
     
-            <button class="sign  my-5" type=" submit"> Registrati </button>
+            <button class="sign my-5" type=" submit"> Registrati </button>
         </form>
         {{-- <div class="social-message">
             <div class="line"></div>

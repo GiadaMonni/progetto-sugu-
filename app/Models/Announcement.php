@@ -11,7 +11,7 @@ use App\Models\Announcement;
 class Announcement extends Model
 {
     use HasFactory;
-    protected $fillable=['name','body','distretto','price'];
+    protected $fillable=['name','body','distretto','price',];
 
     public function category(){
         return $this->belongsTo(Category::class);

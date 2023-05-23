@@ -52,10 +52,10 @@ h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4{
     
 }
 
-.logout{
+/* .logout{
     display: flex;
     justify-content: center;
-}
+} */
 nav:hover{
     background-color: var(--darkorchid);
     box-shadow: 2px 2px 15px var(--acqua-marina);
@@ -70,11 +70,11 @@ ul{
     color: rgb(255, 0, 255);
     font-style: oblique;
 }
-.link2:hover:hover{
+.link2:hover{
     color: yellow;
     font-style: oblique;
 }
-.link3:hover:hover{
+.link3:hover{
     color:var(--aliceblue);
     font-style: oblique;
     

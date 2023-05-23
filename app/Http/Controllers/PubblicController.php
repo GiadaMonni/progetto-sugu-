@@ -12,4 +12,10 @@ class PubblicController extends Controller
         // dd($announcements);
         return view('welcome');
     }
+
+    // public function homepage()
+    // {
+    //     $announcements= Announcement::where('is_accepted', true)->take(6)->get()->sortByDesc('created_at');
+    //     return view('welcome', compact('announcements'));
+    // }
 }
