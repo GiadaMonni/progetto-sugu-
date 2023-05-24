@@ -56,13 +56,9 @@
                             </div>
                             
                                                             
-                                    <button type="submit">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        Crea
-                                    </button>
+                            <button class="butt-ann my-4" type="submit">
+                                crea
+                            </button>
                         
                             </form>
                         </div>
