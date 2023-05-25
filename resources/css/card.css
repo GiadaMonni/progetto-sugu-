@@ -175,7 +175,8 @@
         letter-spacing: 3px;
         font-size: 22px;
         line-height: 1.7;
-        color: #102770;
+        color: var(--darkorchid);
+        text-shadow: 2px 2px 1px black;
         transform: translate3d(0, 0, 35px) perspective(100px);
     }
     .pricing-wrap h4:before{
@@ -214,7 +215,7 @@
         letter-spacing: 1px;
         font-size: 36px;
         line-height: 1.1;
-        color: #102770;
+        color: var(--darkorchid);
         transform: translate3d(0, 0, 30px) perspective(100px);
     }
     .pricing-wrap h2 sup{
@@ -230,13 +231,13 @@
         font-size: 14px;
         line-height: 1.2;
         letter-spacing: 1px;
-        color: #102770;
+        color: var(--darkorchid);
         transform: translate3d(0, 0, 30px) perspective(100px);
     }
     .card-back h2,
     .card-back p,
     .card-back h4{
-        color: #0c1c00;
+        color: var(--darkorchid);
     }
     .link {
         position: relative;
@@ -244,8 +245,8 @@
         border-radius: 4px;
         display: inline-block;
         text-align: center;
-        color: #ffeba7;
-        background-color: #102770;
+        color: black;
+        background-color: var(--darkorchid);
         transition: all 200ms linear;
         font-family: 'Poppins', sans-serif;
         font-weight: 500;
@@ -254,15 +255,16 @@
         transform: translate3d(0, 0, 30px) perspective(100px);
     }
     .link:hover {
-        color: #102770;
-        background-color: #ffeba7;
+        color: var(--darkorchid);
+        background-color: var(--black);
     }
     .card-back .link{
-        background-color: #0c1c00;
+        background-color: var(--black);
+        color: var(--darkorchid);
     }
     .card-back .link:hover{
-        color: #0c1c00;
-        background-color: #ffeba7;
+        color: var(--black);
+        background-color: var(--darkorchid);
     }
     .img-wrap img{
         width: 100%;
@@ -272,14 +274,15 @@
     .img-1{
         position: absolute;
         display: block;
-        left: -160px;
-        top: -50px;
+        left: -100px;
+        top: -65px;
         z-index: 5;
-        width: calc(80% + 160px);
+        width: calc(65% + 20px);
         transform: translate3d(0, 0, 45px) perspective(100px);
         opacity: 1;
         pointer-events: auto;
         transition: transform 400ms 1200ms ease, opacity 400ms 1200ms ease;
+        /* border: solid transparent; */
     }
     .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-1 {
         opacity: 0;
@@ -305,7 +308,7 @@
         right: -20px;
         top: -40px;
         z-index: 5;
-        width: calc(60% + 20px);
+        width: calc(25% + 20px);
         transform: translate3d(0, 0, 55px) perspective(100px) scale(1);
         opacity: 1;
         pointer-events: auto;
@@ -320,15 +323,17 @@
     .img-6{
         position: absolute;
         display: block;
-        right: -20px;
-        bottom: -55px;
+        right: -50px;
+        bottom: -65px;
         z-index: 5;
-        width: calc(20% + 30px);
+        width: calc(20% + 100px);
         transform: translate3d(0, 0, 25px) perspective(100px) scale(1);
         opacity: 1;
         pointer-events: auto;
         transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
+        
     }
+
     .pricing:checked ~ .card-3d-wrap .card-3d-wrapper .img-6 {
         opacity: 0;
         transform: translate3d(0, 0, 25px) perspective(100px) scale(0.4);
@@ -339,10 +344,10 @@
     .img-4{
         position: absolute;
         display: block;
-        left: -60px;
-        top: -60px;
+        left: -30px;
+        top: -40px;
         z-index: 5;
-        width: calc(65% + 60px);
+        width: calc(35% + 30px);
         transform: translate3d(0, 0, 45px) perspective(100px) scale(0.5);
         opacity: 0;
         pointer-events: none;
@@ -393,7 +398,7 @@
     
     
     
-    .logo {
+    /* .logo {
         position: fixed;
         top: 30px;
         right: 30px;
@@ -405,4 +410,4 @@
         height: 26px;
         width: auto;
         display: block;
-    }
+    } */
