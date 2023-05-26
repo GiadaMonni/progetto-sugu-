@@ -49,13 +49,11 @@ h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4{
     position: sticky;
     top: 0;
     z-index: 2;
-    
 }
 
-/* .logout{
-    display: flex;
-    justify-content: center;
-} */
+a{
+    text-decoration: none;
+}
 nav:hover{
     background-color: var(--darkorchid);
     box-shadow: 2px 2px 15px var(--acqua-marina);
@@ -78,4 +76,16 @@ ul{
     color:var(--aliceblue);
     font-style: oblique;
     
+}
+.navbott{
+background-color: transparent;
+border: transparent solid;
+}
+.tendina{
+    background-color: transparent;
+    border: transparent solid;
+}
+.category{
+    position: relative;
+    top: -3px;
 }

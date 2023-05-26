@@ -1,3 +1,7 @@
+    *{
+    
+        font-family: comic sans Ms ;
+    }
 h1{
     font-family: carrots;
     text-shadow:-2px 0 rgb(74, 25, 44), 0 2px rgb(74, 25, 44), 2px 0  rgb(74, 25, 44), 0 -2px  rgb(74, 25, 44);
@@ -7,10 +11,10 @@ h1{
 h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4{
     font-family: spective;
 }
-*{
-   
-    font-family: comic sans Ms ;
+.sugu p{
+    color: rgb(74, 25, 44) ;
 }
+
 :root{
     --acqua-marina:	 rgb(0,255,255);  
     --blue :rgb(0,0,255) ;
@@ -50,9 +54,9 @@ h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4{
     background-size: cover;
 }
 h1{
-    font-size: 20vh;
+    font-size: 15vh;
 }
-.btn{
+.btnhead{
     height: 30vh;
     width: 40vh;
     border-radius: 20%;
@@ -60,7 +64,7 @@ h1{
     background-image: url(https://img.freepik.com/free-photo/asian-woman-wearing-japanese-traditional-kimono-looking-cherry-blossoms-castle-himeji-japan_335224-159.jpg?w=996&t=st=1684579568~exp=1684580168~hmac=bb6ac14c091f1acf525b8c2d488781df1b3c877b40e2b1bcb1c3608bdadc4089);
     background-size: cover;
 }
-button a{
+.botthead a{
     text-shadow:-2px 0 rgb(74, 25, 44), 0 2px rgb(74, 25, 44), 2px 0  rgb(74, 25, 44), 0 -2px  rgb(74, 25, 44);
     text-decoration: none;
     color: greenyellow;

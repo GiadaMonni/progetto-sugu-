@@ -14,7 +14,7 @@
     
             <div class="input-group  my-2">
                 <label for="exampleInputEmail"> Email Address </label>
-                <input type="email" name="email" id=" exampleInputEmail " placeholder=" emailHelp ">
+                <input type="email" name="email" id=" exampleInputEmail " placeholder=" Email Address ">
                 <div id="emailHelp"> 
                     <p> Questa mail non potra` essere vista da nessuno a parte te </p>
                 </div>

@@ -34,6 +34,7 @@ class CreateAnnouncement extends Component
     public function store()
     {
         $category=Category::find($this->category);
+       $user=Auth::user();
 
         $announcement= Announcement::create(
                 [ 
@@ -41,6 +42,9 @@ class CreateAnnouncement extends Component
                 'body'=>$this->body,
                 'distretto'=>$this->distretto,
                 'price'=>$this->price,
+                'category_id'=>$category->id,
+                'user_id'=>$user->id
+                
                 ]
             );
             // Auth::user()->announcements()->save($announcement);
