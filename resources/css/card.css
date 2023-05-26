@@ -18,6 +18,11 @@
         --darkorchid:rgb(153,50,204);
         --black: rgb(0, 0, 0);
     }
+
+    .annunci{
+        display: flex;
+        justify-content: center;
+    }
     
     a {
         cursor: pointer;
@@ -42,7 +47,7 @@
         position: relative;
         width: 100%;
         z-index: 1;
-        display: block;
+        /* display: block; */
     }
     .full-height{
         min-height: 100vh;
@@ -362,10 +367,10 @@
     .img-5{
         position: absolute;
         display: block;
-        right: -70px;
-        top: -50px;
+        right: -60px;
+        top: -40px;
         z-index: 6;
-        width: calc(60% + 70px);
+        width: calc(35% + 45px);
         transform: translate3d(0, 0, 35px) perspective(100px) scale(0.5) rotate(0deg);
         opacity: 0;
         pointer-events: none;

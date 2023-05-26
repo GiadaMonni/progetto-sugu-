@@ -5,14 +5,14 @@
                         <x-header/>     
                     </div>
 
-                    <div class="container-fluid">
-                        <div class="row">
+                    <div class="container-fluid ">
+                        <div class="row annunci">
                             @foreach ($announcements as $announcement)
                                 {{-- card --}}
         <div class="col-12 col-md-8 col-lg-3 section over-hide">
-            <div class="container">
-                <div class="row full-height justify-content-center">
-                    <div class="col-12 text-center align-self-center py-5">
+            <div class="container ">
+                <div class="row justify-content-center">
+                    <div class="  text-center align-self-center py-5">
                         <div class="section text-center py-5 py-md-0">
                             <input class="pricing" type="checkbox" id="pricing" name="pricing"/>
                             <label for="pricing"><span class="block-diff">Viaggio<span class="float-right"> Itinerario </span></span></label>
@@ -42,7 +42,7 @@
                                     </div>
                                     <div class="card-back">
                                         <div class="pricing-wrap">
-                                            <h4 class="mb-5"> Viaggio </h4>
+                                            <h4 class="mb-5"> Esperienza </h4>
                                             <p class="mb-2"> Vieni a scoprire {{$announcement->name}}</p>
                                             <p class="mb-4"> {{$announcement->body}} </p>
                                             <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
@@ -55,10 +55,10 @@
                                                 <img src="/img/gatto.png" alt="">
                                             </div>
                                             <div class="img-wrap img-5">
-                                                <img src="https://assets.codepen.io/1462889/Ivy.png" alt="">
+                                                <img src="/img/maschera.png" alt="">
                                             </div>
                                             <div class="img-wrap img-7">
-                                                <img src="https://assets.codepen.io/1462889/IvyRock.png" alt="">
+                                                <img src="/img/carpa.png" alt="">
                                             </div>
                                         </div>
                                     </div>
