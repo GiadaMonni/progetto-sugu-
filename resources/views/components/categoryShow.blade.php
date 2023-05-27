@@ -1,14 +1,9 @@
-        <x-layout>
-            <div class="container-fluid">
-                <div class="row">
-                        <div class="col-12">
-                            <x-header/>     
-                        </div>
-
-                        <div class="container-fluid ">
-                            <div class="row annunci">
-            @foreach ($announcements as $announcement)
-                <div class="col-12 col-md-8 col-lg-4 section over-hide mx-5" style="width: 24rem" >
+<x-layout>
+    <h1 class="text-center">{{$category->name}}</h1>
+    <div class="container">
+        <div class="row">
+            @forelse ($category->announcements as $annouuncement)
+            <div class="col-12 col-md-8 col-lg-4 section over-hide mx-5" style="width: 24rem" >
                 <div class="container ">
                     <div class="row justify-content-center">
                         <div class="  text-center align-self-center py-5">
@@ -72,11 +67,14 @@
                     </div>
                 </div> 
                 
-            </div>
-            @endforeach
-
-                                
-                            
-                            </div>
-                        </div>
-            </x-layout>
+            </div> 
+            @empty
+                <div class="col-12 --bs-danger-bg-subtle">
+                    <p>Non sono presenti annunci per questa categoria </p>
+                    <p>Se vuoi pubblicarne uno clicca qui : <a href="{{rote('announcements.create')}}"></a>
+                    </p>
+                </div>
+            @endforelse
+        </div>
+    </div>
+</x-layout>
