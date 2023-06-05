@@ -8,8 +8,8 @@
                     <div class="row justify-content-center">
                         <div class="  text-center align-self-center py-5">
                             <div class="section text-center py-5 py-md-0">
-                                <input class="pricing" type="checkbox" id="pricing" name="pricing"/>
-                                <label for="pricing">
+                                <input class="pricing" type="checkbox" id="category_id" name="category_id"/>
+                                <label for="category_id">
                                     <span class="block-diff">Viaggio
                                     <span class="float-right"> Itinerario </span>
                                     </span>
@@ -23,7 +23,7 @@
                                                 <p class="mb-4">{{$announcement->distretto}}</p>
                                                 <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
                                                 <p class="my-4"> Un esperienza da sogno </p>
-                                                <a href="#0" class="link"> Dettaglio </a>
+                                                <a href="" class="link"> Dettaglio </a>
                                                 <div class="img-wrap img-2">
                                                     <img src="https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2019/01/Giappone.jpeg?w=1000&h=312&crop=1" alt="MONTE FUJI">
                                                 </div>
@@ -69,9 +69,9 @@
                 
             </div> 
             @empty
-                <div class="col-12 --bs-danger-bg-subtle">
+                <div class="col-12 --bs-danger-bg-subtle text-center">
                     <p>Non sono presenti annunci per questa categoria </p>
-                    {{-- <p>Se vuoi pubblicarne uno clicca qui : <a href="{{rote('create-announcement')}}"></a> --}}
+                    <p>Se vuoi pubblicarne uno clicca qui : <a href="{{route('announcements.create')}}">Crea annuncio</a>
                     </p>
                 </div>
             @endforelse
