@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PubblicController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
 
 /*
@@ -24,5 +25,18 @@ Route::get('/nuovo/annuncio',[AnnouncementController::class,'createAnnouncement'
 Route::get('/dettaglio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
 
 Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnuncement'])->name('announcements.index');
+
+// home revisor
+Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+
+Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnuncement'])->name('revisor.accept_announcement');
+
+Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnuncement'])->name('revisor.reject_announcement');
+
+Route::get('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
+
+Route::get('/revisor/undo', [RevisorController::class,'undo'])->name('revisor_undo');
 
 
