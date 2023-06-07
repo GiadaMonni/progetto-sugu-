@@ -23,7 +23,7 @@
                                                 <p class="mb-4">{{$announcement->distretto}}</p>
                                                 <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p>
                                                 <p class="my-4"> Un esperienza da sogno </p>
-                                                <a href="" class="link"> Dettaglio </a>
+                                                <a href="{{route('announcements.show',$announcement)}}" class="link"> Dettaglio </a>
                                                 <div class="img-wrap img-2">
                                                     <img src="https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2019/01/Giappone.jpeg?w=1000&h=312&crop=1" alt="MONTE FUJI">
                                                 </div>

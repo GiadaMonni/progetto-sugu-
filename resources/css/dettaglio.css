@@ -8,7 +8,13 @@
         font-family: system-ui;
         background: #3d76d9;
     } */
-    
+    :root{
+        --acqua-marina:	 rgb(0,255,255);  
+        --blue :rgb(0,0,255) ;
+        --aliceblue: rgb(240,248,255);
+        --darkorchid:rgb(153,50,204);
+        --black: rgb(0, 0, 0);
+    }
     .visuallyhidden {
         position: absolute;
         z-index: -1;
@@ -21,6 +27,7 @@
         color: white;
         text-align: center;
         margin-top: 1em;
+        text-shadow: black 1px 1px;
     }
     
     .dettaglio {
@@ -29,12 +36,15 @@
         margin-top: 2em;
         background: rgba(0,0,0,.1)
     }
-    
+    .dettaglio h4{
+        color: var(--darkorchid);
+        font-family: carrots;
+    }
     .card-dett {
-        --card-width: 80%;
-        --card-max-width: 280px;
-        --card-height: 350px;
-        --carousel-min-width: 600px;
+        --card-width: 100%;
+        --card-max-width: 380px;
+        --card-height: 500px;
+        --carousel-min-width: 700px;
         z-index: 1;
         position: relative;
         margin: 0 auto;
@@ -42,6 +52,12 @@
         height: var(--card-height);
         min-width: var(--carousel-min-width);
         transition: filter .3s ease;
+    }
+    .card-dett p{
+        margin-top: 10px;
+       font-size: 20px;
+       text-shadow: white 1px 1px;
+       font-weight: bold;
     }
     
     @media screen and (max-width: 640px) {
@@ -55,7 +71,10 @@
     }
     
     .card-dett .card-detta {
-        background: whitesmoke;
+        /* background: rgb(202, 202, 249); */
+        background-image: url(https://img.freepik.com/free-photo/watercolor-elements-design-close-up_23-2149098475.jpg?size=626&ext=jpg&ga=GA1.1.315318017.1683296549&semt=ais);
+        background-repeat: no-repeat;
+        background-size: cover;
         width: var(--card-width);
         max-width: var(--card-max-width);
         text-align: center;
@@ -64,7 +83,7 @@
         height: var(--card-height);
         position: absolute;
         margin: 0 auto;
-        color: rgba(0,0,0,.5);
+        color: rgba(0,0,0);
         transition: inherit;
         -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
         -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
@@ -83,20 +102,30 @@
     
     
     .card-detta:nth-of-type(1) .image-container {
+        height: 300px;
+        width: 300px;
         background-image: url("https://static.addtoany.com/images/dracaena-cinnabari.jpg");
     }
     
     .card-detta:nth-of-type(2) .image-container {
+        height: 300px;
+        width: 300px;
         background-image: url("https://www.w3schools.com/w3css/img_lights.jpg")
     }
     
     .card-detta:nth-of-type(3) .image-container {
+        height: 300px;
+        width: 300px;
         background-image: url("https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
     }
     .card-detta:nth-of-type(4) .image-container {
+        height: 300px;
+        width: 300px;
         background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
     }
     .card-detta:nth-of-type(5) .image-container {
+        height: 300px;
+        width: 300px;
         background-image: url("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
     }
     
@@ -121,12 +150,45 @@
         display: block;
         width: 120%;
         height: 120%;
-        border: solid 3px rgba(0,0,0,.1);
+        /* border: solid 3px rgba(0,0,0,.1); */
         border-radius: 100%;
         position: absolute;
         top: calc(-10% - 3px);
         left: calc(-10% - 3px);
     }
+    .btn-dettaglio {
+        background-image: url(https://img.freepik.com/free-photo/colorful-paint-canvas_53876-89428.jpg?size=626&ext=jpg&ga=GA1.1.315318017.1683296549&semt=ais);
+        background-size: cover;
+        width: 9em;
+        height: 3em;
+        border-radius: 30em;
+        font-size: 15px;
+        font-family: inherit;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: 6px 6px 12px #c5c5c5,
+                    -6px -6px 8px #ffffff;
+       }
+       
+       .btn-dettaglio::before {
+        content: '';
+        width: 0;
+        height: 3em;
+        border-radius: 30em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+       }
+       
+       .btn-dettaglio:hover::before {
+        width: 9em;
+       }
     
     /* h2 {
         padding: 1em;

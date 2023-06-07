@@ -1,5 +1,5 @@
-const cardsContainer = document.querySelector(".card-carousel");
-const cardsController = document.querySelector(".card-carousel + .card-controller")
+const cardsContainer = document.querySelector(".card-dett");
+const cardsController = document.querySelector(".card-dett + .card-controller")
 
 class DraggingEvent {
   constructor(target = undefined) {
