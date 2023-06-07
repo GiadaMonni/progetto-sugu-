@@ -56,6 +56,13 @@ h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4{
 h1{
     font-size: 15vh;
 }
+.foto{
+    height: 50vh;
+    width: 60vh;
+    background-image: url(https://img.freepik.com/free-photo/wood-bridge-mandalay_1150-17954.jpg?size=626&ext=jpg&ga=GA1.1.315318017.1683296549&semt=ais);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .btnhead{
     height: 30vh;
     width: 40vh;

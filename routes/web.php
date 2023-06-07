@@ -23,4 +23,6 @@ Route::get('/nuovo/annuncio',[AnnouncementController::class,'createAnnouncement'
 
 Route::get('/dettaglio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
 
+Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnuncement'])->name('announcements.index');
+
 

@@ -3,9 +3,13 @@
 
           <div class="row align-items-center header py-0">
 
-            <div class="col-12 text-center text-darkorchid sugu ">
+            <div class="col-12 col-md-8 col-lg-7 text-end text-darkorchid sugu me-5 ">
               <h1>SUGU</h1>
               <p> Viaggi organizzati per visitare tutto il Giappone</p>
+            </div>
+
+            <div class="foto col-12 col-md-8 col-lg-2 ms-5 mt-5">
+
             </div>
           
               <div class=" mb-5 col-12 d-flex justify-content-center">

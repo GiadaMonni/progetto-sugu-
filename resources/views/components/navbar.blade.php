@@ -59,6 +59,10 @@
             @endforeach
           </ul>
         </div>
+
+        <a href="{{route('announcements.index')}}"> 
+          <li class="px-2 fs-6 link3"> Annunci</li>
+        </a>
         
       <a href=""> 
         <li class="px-2 fs-6 link3">Chi siamo</li>
