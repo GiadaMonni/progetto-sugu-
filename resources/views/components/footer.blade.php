@@ -6,6 +6,7 @@
         <li class="px-3  link1">GIADA MONNI</li>
         <li class="px-3  link2">TEL.351 5232386</li>
         <li class="px-3  link3">MAIL: mg.chobit@gmail.com</li>
+        <li class="px-3  link1"><a href="{{route('become.revisor')}}"> Diventa revisore </a></li>
     </ul>
 
     <div class="col-6 col-md-2 col-lg-2 aereo">

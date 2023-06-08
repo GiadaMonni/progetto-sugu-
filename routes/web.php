@@ -27,16 +27,16 @@ Route::get('/dettaglio/{announcement}', [AnnouncementController::class, 'showAnn
 Route::get('/tutti/annunci', [AnnouncementController::class, 'indexAnnuncement'])->name('announcements.index');
 
 // home revisor
-Route::get('/revisor/home', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
-Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnuncement'])->name('revisor.accept_announcement');
+Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnuncement'])->middleware('isRevisor')->name('revisor.accept_announcement');
 
-Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnuncement'])->name('revisor.reject_announcement');
+Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnuncement'])->middleware('isRevisor')->name('revisor.reject_announcement');
 
 Route::get('/richiesta/revisore',[RevisorController::class,'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
 Route::get('/rendi/revisore/{user}',[RevisorController::class,'makeRevisor'])->name('make.revisor');
 
-Route::get('/revisor/undo', [RevisorController::class,'undo'])->name('revisor_undo');
+// Route::get('/revisor/undo', [RevisorController::class,'undo'])->name('revisor_undo');
 
 
