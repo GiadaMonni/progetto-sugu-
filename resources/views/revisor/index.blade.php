@@ -1,8 +1,13 @@
 <x-layout>
-<h1> Zona Revisore<h1/>
-  <h3>{{$announcement_to_check?'Annuncio ancora da revisionare' : 'Non ci sono annunci da revisionare'}}</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-light p-5">
+        <h3>{{$announcement_to_check?'Annuncio ancora da revisionare' : 'Non ci sono annunci da revisionare'}}</h3>
+    </div>
+  </div>
+</div>
    @if ($announcement_to_check)
-
+   
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -28,10 +33,10 @@
                 </button>
               </div>
               <div>
-                <h4 class="mb-5">{{$announcement->name}}</h4>
-                <h2 class="mb-2"> € {{$announcement->price}}</h2>
-                <p class="mb-4">{{$announcement->distretto}}</p>
-                <p class="mb-4"> {{$announcement->body}} </p>
+                <h4 class="mb-5">{{$announcement_to_check->name}}</h4>
+                <h2 class="mb-2"> € {{$announcement_to_check->price}}</h2>
+                <p class="mb-4">{{$announcement_to_check->distretto}}</p>
+                <p class="mb-4"> {{$announcement_to_check->body}} </p>
               </div>
             </div>
             <div class="row">
