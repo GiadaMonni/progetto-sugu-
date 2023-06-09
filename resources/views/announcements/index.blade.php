@@ -8,7 +8,7 @@
 <div class="row justify-content-center">
     <div class="  text-center align-self-center py-5">
         <div class="section text-center py-5 py-md-0">
-            <input class="pricing" type="checkbox" id="{{$announcement->id}}" name="name"/>
+            <input class="pricing" type="checkbox" id="{{$announcement->id}}" name="{{$announcement->id}}"/>
             <label for="{{$announcement->id}}">
                 <span class="block-diff">Viaggio
                 <span class="float-right"> Itinerario </span>
@@ -70,7 +70,8 @@
 
 </div>
 @endforeach
-{{$announcements->links()}}
+
         </div>
     </div>
+    {{$announcements->links()}}
 </x-layout>

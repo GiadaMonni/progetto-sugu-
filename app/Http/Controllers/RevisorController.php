@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Session;
 
 class RevisorController extends Controller
 {
-    public function index()
+    public function indexRevisor()
         {
             $announcement_to_check=Announcement::where('is_accepted', null)->first();
             return view('revisor.index',compact('announcement_to_check'));
