@@ -42,7 +42,7 @@
         @if (Auth::user()->is_revisor)
         <li>
           <a href="{{route('revisor.index')}}"> Zona revisore 
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          <span class="pall_ross translate-middle badge rounded-pill bg-danger">
             {{App\Models\Announcement::toBeRevisionedCount()}}
             <span class="visually-hidden"> Unread Messages</span>
           </span>
@@ -51,7 +51,7 @@
         @endif
         @endguest
         <a href="{{route('homepage')}}">
-          <li class="px-2 fs-6 link3">Home</li>
+          <li class="px-2 fs-6 link3 ms-4">Home</li>
         </a>
         
         <div class="dropdown link3 category fs-6">
