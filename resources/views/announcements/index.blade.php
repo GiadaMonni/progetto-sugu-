@@ -2,7 +2,7 @@
     <h1 class="text-center">TUTTI GLI ANNUNCI</h1>
     <div class="container-fluid ">
         <div class="row annunci">
-@foreach ($announcements as $announcement)
+@forelse ($announcements as $announcement)
 <div class="col-12 col-md-8 col-lg-4 section over-hide mx-5" style="width: 24rem" >
 <div class="container">
 <div class="row justify-content-center">
@@ -69,7 +69,13 @@
 </div> 
 
 </div>
-@endforeach
+@empty
+<div class="col-12">
+    <div class="alert alert-warning py-3 shadow">
+        <p class="lead"> Non ci sono annunci per questa ricerca </p>
+    </div>
+</div>
+@endforelse
 
         </div>
     </div>

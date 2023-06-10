@@ -7,11 +7,24 @@ use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use App\Models\Announcement;
+use Laravel\scout\Searchable;
 
 class Announcement extends Model
 {
     use HasFactory;
     protected $fillable=['name','body','distretto','price', 'category_id', 'user_id'];
+
+    public function toSearchableArray(){
+        $category =$this->category;
+        $array =[
+            'id' =>$this-> id,
+            'name' =>$this-> name,
+            'body' =>$this-> body,
+            'price' =>$this-> price,
+            'category'=>$category
+        ];
+         return $array;
+    }
 
     public function category(){
         return $this->belongsTo(Category::class);
