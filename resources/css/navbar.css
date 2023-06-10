@@ -91,7 +91,7 @@ border: transparent solid;
 }
 .pall_ross{
     position: absolute;
-    left: 700px;
-    bottom: 34px;
-    
+    right: 0;
+    background-color: var(--black);
 }
+

@@ -18,7 +18,7 @@
 
       <li class="px-2 fs-6 link1 dropdown"> 
 
-        <a href="" class="text-center" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> {{Auth::user()->name}} </a>
+        <a href="" class="text-cente link3" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> {{Auth::user()->name}} </a>
 
         <div class="container-fluid">
           <div class="row">
@@ -41,8 +41,8 @@
       </li>       
         @if (Auth::user()->is_revisor)
         <li>
-          <a href="{{route('revisor.index')}}"> Zona revisore 
-          <span class="pall_ross translate-middle badge rounded-pill bg-danger">
+          <a href="{{route('revisor.index')}}" class="link3 mx-2"> _Zona revisore_
+          <span class="pall_ross translate-middle badge rounded-pill ">
             {{App\Models\Announcement::toBeRevisionedCount()}}
             <span class="visually-hidden"> Unread Messages</span>
           </span>
@@ -51,7 +51,7 @@
         @endif
         @endguest
         <a href="{{route('homepage')}}">
-          <li class="px-2 fs-6 link3 ms-4">Home</li>
+          <li class="px-2 fs-6 link3">Home</li>
         </a>
         
         <div class="dropdown link3 category fs-6">
@@ -60,7 +60,9 @@
           </div>
           <ul class="dropdown-menu tendina" aria-labelledby="categoriesDropdown">
             @foreach($categories as $category)
-            <li><a class="dropdown-item " href="{{route('categoryShow',compact('category'))}}">{{($category->name)}}</a></li>
+            <li>
+              <a class="dropdown-item link3 " href="{{route('categoryShow',compact('category'))}}">{{($category->name)}}</a>
+            </li>
             @endforeach
           </ul>
           

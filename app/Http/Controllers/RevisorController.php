@@ -39,7 +39,7 @@ class RevisorController extends Controller
     }
     public function makeRevisor(User $user){
         Artisan::call('sugu:makeUserRevisor',["email"=>$user->email]);
-        return redirect('/')->with('message','Complimenti! Ora sei revisore');
+        return redirect('/homepage')->with('message','Complimenti! Ora sei revisore');
     }
 
     // public function undo()
