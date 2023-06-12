@@ -19,9 +19,9 @@ class PubblicController extends Controller
         return view('announcements/categoryShow' , compact('category'));
     }
 
-    public function searchAnnouncements(Request $request){
-        $annouincements =Announcement::search($request->searched)->where('is_accepted',true)->paginate(9);
-        return view('announcements.index', compact('annouincements'));
+    public function searchAnnouncement(Request $request){
+        $announcements=Announcement::search($request->searched)->where('is_accepted',true)->paginate(9);
+        return view('announcements.index', compact('announcements'));
     }
 
    
