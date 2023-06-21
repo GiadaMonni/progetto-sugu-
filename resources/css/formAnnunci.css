@@ -1,6 +1,10 @@
+    .contenitore{
+        height: 500vh;
+    }
+    
     .login-box {
         position: absolute;
-        top: 60%;
+        top: 1400px;
         left: 50%;
         width: 400px;
         padding: 40px;

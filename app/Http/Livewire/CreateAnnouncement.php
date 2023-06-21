@@ -17,8 +17,13 @@ class CreateAnnouncement extends Component
     public $distretto;
     public $price;
     public $category;
+    public $message;
+    public $validated;
     public $temporary_images;
     public $images=[];
+    public $image;
+    public $form_id;
+    public $announcement;
 
     
     protected $rules = [
